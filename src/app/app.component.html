@@ -1,0 +1,83 @@
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <img src="../../assets/images/QY7WSh.tif.png" alt="">
+    <ul>
+      <li>
+        <mat-icon>favourite</mat-icon><span>Dashboard</span>
+      </li>
+      <li>
+        <mat-icon>favourite</mat-icon><span>Task and Assignment</span>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+      <mat-toolbar color="primary">
+        <mat-toolbar-row >
+          <span>Dashboard</span>
+          <span class="example-spacer"></span>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>favourite</mat-icon>
+          </button>
+        </mat-toolbar-row>
+    
+        <mat-toolbar-row>
+          <span></span>
+          <span class="example-spacer"></span>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>print</mat-icon>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>download</mat-icon>
+            </button>
+          </button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <div >
+        <p>Sales Activity (95)</p>
+        <div style="display:flex; flex-direction: row;overflow-x: scroll;">
+          <mat-card *ngFor="let item of salesActivity" style="width:80px;">
+            <p>
+              <span>{{item.type}}</span>
+              <span>{{item.qty}}</span>
+            </p>
+            <p>
+              <span>{{item.trend}}</span>
+            </p>
+          </mat-card>
+        </div>
+
+        <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile>
+            <mat-card>
+              <mat-card-title>Task</mat-card-title>
+              <mat-card-content></mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card>
+              <mat-card-title>Top Selling Varients</mat-card-title>
+              <mat-card-content></mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card>
+              <mat-card-title>Products</mat-card-title>
+              <mat-card-content></mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card>
+              <mat-card-title>Stock Details</mat-card-title>
+              <mat-card-content></mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <router-outlet></router-outlet> -->
